@@ -1,0 +1,134 @@
+main#food-list-main {
+    margin: 60px 0px 40px 0px;
+    font-size: 16px;
+    width: 100vw;
+    color: var(--text);
+}
+@media (min-width: 1200px) {
+    main#food-list-main {
+        width: 1200px;
+    }
+}
+@media (max-width: 450px) {
+    main#food-list-main {
+        margin-top: 40px;
+    }
+}
+
+#food-list-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    gap: 5px;
+    font-size: 16px;
+}
+
+@media (max-width: 500px) {
+    main,
+    #food-list-header {
+        font-size: 14px;
+    }
+}
+@media (min-width: 1100px) {
+    main,
+    #food-list-header {
+        font-size: 18px;
+    }
+}
+
+#food-list-description-header {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#food-list-brand-header,
+#food-list-brand-owner-header,
+#food-list-category-header {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+@media (max-width: 500px) {
+    #food-list-description-header,
+    #food-list-brand-header,
+    #food-list-brand-owner-header,
+    #food-list-category-header {
+        flex-basis: 25%;
+    }
+}
+
+.food-row {
+    display: flex;
+    gap: 8px;
+    height: auto;
+    padding: 0px 15px;
+    border-top: 1px solid #7c7c7c; /* 115F94 */
+    background-color: var(--background);
+}
+
+.food-row.dark-background {
+    background-color: var(--background3); /* f0f0f0 EAEAEA */
+}
+
+.food-row:hover {
+    background-color: var(--hover); /* e7f1f8 e7f1fa EBEEF8 EAEAEA cfcfcf */
+}
+
+.description-wrapper {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: flex-start;
+}
+.description-wrapper > * {
+    text-align: left;
+}
+
+.food-category-wrapper,
+.food-brand-wrapper,
+.food-brand-owner-wrapper {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+@media (max-width: 500px) {
+    .description-wrapper,
+    .food-category-wrapper,
+    .food-brand-wrapper,
+    .food-brand-owner-wrapper {
+        flex-basis: 25%;
+    }
+}
+
+.food-row-element {
+    box-sizing: border-box;
+    padding: 12px 0;
+}
+
+.food-button {
+    height: 100%;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', Inter, Avenir, Helvetica, Arial, sans-serif;
+    color: var(--accent);
+    text-decoration: underline;
+}
+@media (max-width: 500px) {
+    button,
+    .food-row {
+        font-size: 14px;
+    }
+}

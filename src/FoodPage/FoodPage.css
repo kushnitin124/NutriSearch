@@ -1,0 +1,227 @@
+#food-page {
+    background-color: var(--background2);
+    color: var(--text);
+    box-shadow: 0px 0px 2px 1px var(--shadow);
+    padding: 20px 20px 30px 20px;
+    margin: 0 0 40px 0;
+    width: calc(100vw - 60px);
+}
+@media (max-width: 500px) {
+    #food-page {
+        width: calc(100vw - 20px);
+        padding: 0px 10px 30px 10px;
+        margin: 0;
+        box-shadow: none;
+    }
+}
+@media (min-width: 1100px) {
+    #food-page {
+        padding: 60px; /* 30 */
+        width: 800px;
+    }
+}
+
+#food-description {
+    text-align: left;
+    color: var(--accent); /* #F2E2B0 */
+    font-size: 34px;
+    margin-bottom: 15px;
+    margin-top: -5px;
+}
+@media (max-width: 500px) {
+    #food-description {
+        font-size: 28px;
+    }
+}
+@media (min-width: 1100px) {
+    #food-description {
+        font-size: 36px;
+    }
+}
+
+#portion-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+#portion-input-container {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: var(--background2);
+    border: 1px solid var(--text);
+    padding: 5px 7px 5px 10px;
+    width: 86px; /* 65 */
+}
+#portion-input-container:hover {
+    border: 2px solid var(--accent);
+    padding: 5px 7px 5px 10px;
+    width: 87px;
+}
+
+#portion-label {
+    font-size: 18px;
+    color: var(--text);
+    margin-right: 5px;
+}
+
+#portion-input {
+    box-sizing: border-box;
+    appearance: textfield;
+    color: var(--text);
+    background-color: var(--background2);
+    text-align: end;
+    font-size: 16px;
+    width: 56px;
+    height: 100%;
+    border: none;
+}
+
+#food-nutrients-table-section {
+    /* margin: 0 auto; */
+    margin-top: 15px;
+    max-width: 500px;
+}
+@media (max-width: 500px) {
+    #food-nutrients-table-section {
+        margin-top: 0px;
+    }
+}
+
+#food-nutrients-table-content-container {
+    border: 2px solid var(--shadow);
+}
+
+#food-nutrients-table-title-container {
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 17px;
+    padding-left: 17px;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media (max-width: 500px) {
+    #food-nutrients-table-title-container {
+        font-size: 14px;
+    }
+    #portion-input {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1100px) {
+    #food-nutrients-table-title-container {
+        font-size: 18px;
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+}
+
+#food-nutrients-title-name {
+    text-align: left;
+    flex-grow: 1;
+}
+
+#food-nutrients-title-amount,
+#food-nutrients-title-daily-value {
+    text-align: right;
+    flex-basis: 25%;
+}
+
+#food-nutrients-title-amount {
+    margin-right: 2px;
+}
+
+@media (max-width: 500px) {
+    #food-nutrients-title-amount {
+        flex-basis: 28%;
+        margin-right: 5px;
+    }
+
+    #food-nutrients-title-daily-value {
+        flex-basis: 16.66%;
+    }
+}
+
+@media (min-width: 1100px) {
+    #food-nutrients-title-amount {
+        margin-right: 4px;
+    }
+}
+
+.unknown {
+    font-size: smaller;
+    color: var(--unknown);
+}
+
+
+#back-button-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 50px; /* 37 */
+    width: 100%;
+    max-width: 920px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+@media (max-width: 1100px) and (min-width: 900px) {
+    #back-button-wrapper {
+        max-width: 1074px; /* 920 */
+    }
+}
+
+#back-button {
+    position: relative;
+    padding: 0.3em 0.5em 0.4em 1.5em;
+    font-size: 16px;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+#back-button::before {
+    content: '';
+    position: absolute;
+    border-color: var(--text);
+    border-style: solid;
+    border-width: 0 0.18em 0.18em 0;
+    height: 0.65em;
+    top: 1.6em; /* 1.3 */
+    left: 0.7em; /* 0.6 */
+    margin-top: -1em;
+    transform: rotate(135deg);
+    width: 0.65em;
+}
+
+#back-button:hover {
+    background-color: var(--hover2);
+}
+
+@media (max-width: 920px) and (min-width: 500px) {
+    #back-button-wrapper {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    #back-button-wrapper {
+        background-color: var(--background2);
+        padding: 0;
+    }
+
+    #back-button {
+        font-size: 14px;
+        margin-left: 3px;
+        padding-left: 1.5em;
+    }
+}

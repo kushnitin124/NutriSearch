@@ -1,0 +1,95 @@
+header {
+    box-sizing: border-box;
+    display: flex;
+    place-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: var(--background2);
+    box-shadow: 0px 0px 2px 1px var(--shadow);
+}
+
+#header-content {
+    display: flex;
+    place-items: center;
+    height: 100%;
+    width: 100vw;
+    max-width: 2000px;
+    padding: 0 50px;
+}
+
+#header-content > * {
+    flex-basis: 33.33%;
+}
+
+#page-title-container {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 700px) {
+    #theme-button-container,
+    #page-title-container {
+        display: none;
+    }
+
+    #theme-button-container {
+        flex-basis: auto;
+    }
+    
+    header {
+        height: 65px;
+        padding: 10px 0;
+    }
+    
+    #header-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        gap: 0;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 1500px) {
+    #header-content {
+        padding: 0 10px;
+    }
+}
+@media (max-width: 500px) {
+    #header-content {
+        padding: 0 10px;
+    }
+}
+
+#page-title {
+    font-size: 32px;
+    color: var(--text);
+    margin: 0;
+    cursor: default;
+}
+
+#site-icon {
+    background-image: url('../src/assets/food-icon-berries.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+@media (max-width: 1100px) {
+    #page-title {
+        font-size: 30px;
+    }
+    #site-icon {
+        background-size: 40px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+#theme-button-container {
+    display: flex;
+    justify-content: end;
+}
